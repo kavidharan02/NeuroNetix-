@@ -6,6 +6,8 @@ import Services from "./components/Services";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import CareerPage from "./components/CareerPage";
+
 function App() {
   return (
     <>

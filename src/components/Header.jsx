@@ -6,6 +6,7 @@ const navItems = [
   { href: "#services", label: "Services" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
+  { href: "https://www.linkedin.com/in/kavidharan-s-000527274", label: "Career", external: true },
 ];
 
 const Header = () => {
@@ -62,12 +63,15 @@ const Header = () => {
           <a
             key={item.href}
             href={item.href}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noopener noreferrer" : undefined}
             style={{
               color: scrolled ? "#0B0C10" : "#C5C6C7",
               transition: "color 0.2s",
             }}
             onMouseOver={e => (e.target.style.color = "#66FCF1")}
             onMouseOut={e => (e.target.style.color = scrolled ? "#0B0C10" : "#C5C6C7")}
+            onClick={item.external ? undefined : handleNavClick}
           >
             {item.label}
           </a>
@@ -89,6 +93,8 @@ const Header = () => {
               onClick={handleNavClick}
               onMouseOver={e => (e.target.style.color = "#66FCF1")}
               onMouseOut={e => (e.target.style.color = "#C5C6C7")}
+              target={item.external ? "_blank" : "_self"}
+              rel={item.external ? "noopener noreferrer" : undefined}
             >
               {item.label}
             </a>
