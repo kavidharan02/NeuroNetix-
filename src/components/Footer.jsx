@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => (
   <footer className="w-full py-12 bg-gradient-to-br from-[#0B0C10] via-[#0B0C10] to-[#1F2833] text-[#C5C6C7] text-center">
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start px-4">
-      {/* Brand & Description */}
+      
       <div className="bg-white rounded-xl p-8 shadow-lg border border-[#1F2833] text-left">
         <div className="text-2xl font-bold mb-2 bg-gradient-to-br from-[#66FCF1] via-[#45A29E] to-[#0B0C10] bg-clip-text text-transparent">
           NeuroNetix
@@ -16,7 +16,7 @@ const Footer = () => (
           +91 9884947279
         </div>
       </div>
-      {/* Quick Links */}
+
       <div className="bg-white rounded-xl p-8 shadow-lg border border-[#1F2833] text-left">
         <div className="text-2xl font-bold mb-2 bg-gradient-to-br from-[#66FCF1] via-[#45A29E] to-[#0B0C10] bg-clip-text text-transparent">
           Quick Links
@@ -28,7 +28,7 @@ const Footer = () => (
           <li><a href="#contact" className="text-[#181d23] hover:text-[#45A29E]">Contact</a></li>
         </ul>
       </div>
-      {/* Stay Connected */}
+
       <div className="bg-white rounded-xl p-8 shadow-lg border border-[#1F2833] text-left flex flex-col justify-between">
         <div className="text-2xl font-bold mb-2 bg-gradient-to-br from-[#66FCF1] via-[#45A29E] to-[#0B0C10] bg-clip-text text-transparent">
           Stay Connected

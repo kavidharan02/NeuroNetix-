@@ -1,5 +1,5 @@
-// filepath: c:\Users\Admin\Desktop\CSE 2022-2026\Projects\Network Landing Page\network-landing-page\src\components\CareerPage.jsx
 import React from "react";
+
 const CareerPage = () => (
   <div className="py-20 px-4 text-center">
     <h2 className="text-3xl font-bold mb-4 text-[#45A29E]">Careers</h2>

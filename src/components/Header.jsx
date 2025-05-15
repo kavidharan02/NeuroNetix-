@@ -21,7 +21,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu on navigation
+
   const handleNavClick = () => setMenuOpen(false);
 
   return (
@@ -42,7 +42,7 @@ const Header = () => {
       >
         NeuroNetix
       </div>
-      {/* Hamburger Icon */}
+
       <div
         className="md:hidden cursor-pointer"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -57,7 +57,7 @@ const Header = () => {
           />
         </svg>
       </div>
-      {/* Desktop Nav */}
+
       <nav className="space-x-6 hidden md:flex">
         {navItems.map((item) => (
           <a
@@ -77,7 +77,7 @@ const Header = () => {
           </a>
         ))}
       </nav>
-      {/* Mobile Nav */}
+
       {menuOpen && (
         <nav className="absolute top-full left-0 w-full bg-[#0B0C10] flex flex-col items-center md:hidden shadow-lg animate-fade-in">
           {navItems.map((item) => (
@@ -107,13 +107,11 @@ const Header = () => {
 
 const FeaturesSection = () => (
   <section id="features" className="scroll-mt-24">
-    {/* Features content */}
   </section>
 );
 
 const ContactSection = () => (
   <section id="contact" className="scroll-mt-24">
-    {/* Contact content */}
   </section>
 );
 
