@@ -21,7 +21,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-
   const handleNavClick = () => setMenuOpen(false);
 
   return (
@@ -33,13 +32,26 @@ const Header = () => {
         background: scrolled ? "#fff" : "#0B0C10",
       }}
     >
-      <div
-        className="text-2xl font-bold transition-colors duration-300"
+      <div className="flex items-center gap-2 text-2xl font-bold transition-colors duration-300"
         style={{
           color: scrolled ? "#0B0C10" : "#66FCF1",
           letterSpacing: "2px",
         }}
       >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-label="NeuroNetix Logo"
+        >
+          <circle cx="16" cy="16" r="14" stroke="#66FCF1" strokeWidth="2.5" fill="#0B0C10"/>
+          <path d="M10 22C14 12 18 20 22 10" stroke="#45A29E" strokeWidth="2.2" strokeLinecap="round"/>
+          <circle cx="10" cy="22" r="2" fill="#66FCF1" stroke="#45A29E" strokeWidth="1"/>
+          <circle cx="22" cy="10" r="2" fill="#66FCF1" stroke="#45A29E" strokeWidth="1"/>
+          <circle cx="16" cy="16" r="2.2" fill="#45A29E" stroke="#66FCF1" strokeWidth="1"/>
+        </svg>
         NeuroNetix
       </div>
 
@@ -69,6 +81,7 @@ const Header = () => {
               color: scrolled ? "#0B0C10" : "#C5C6C7",
               transition: "color 0.2s",
             }}
+            className="relative after:content-[''] after:block after:h-[2px] after:bg-[#66FCF1] after:scale-x-0 after:transition-transform after:duration-300 after:origin-left hover:after:scale-x-100"
             onMouseOver={e => (e.target.style.color = "#66FCF1")}
             onMouseOut={e => (e.target.style.color = scrolled ? "#0B0C10" : "#C5C6C7")}
             onClick={item.external ? undefined : handleNavClick}
@@ -84,7 +97,7 @@ const Header = () => {
             <a
               key={item.href}
               href={item.href}
-              className="py-4 w-full text-center"
+              className="py-4 w-full text-center relative after:content-[''] after:block after:h-[2px] after:bg-[#66FCF1] after:scale-x-0 after:transition-transform after:duration-300 after:origin-left hover:after:scale-x-100"
               style={{
                 color: "#C5C6C7",
                 fontWeight: "bold",
